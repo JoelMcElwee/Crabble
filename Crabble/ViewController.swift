@@ -17,6 +17,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var randomConsonants2 : Int = 0
     var newWord : String = ""
     
+    @IBOutlet var VowelCollectionView: UICollectionView!
     @IBOutlet weak var wordLable: UILabel!
     @IBOutlet weak var VCVLabel: UILabel!
     @IBOutlet weak var VCLabel: UILabel!
@@ -100,8 +101,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        let layout = self.VowelCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.sectionInset = UIEdgeInsetsMake(0, 5, 0, 5);
+        layout.minimumInteritemSpacing = 5; // this number could be anything <=5. Need it here because the default is 10.
+        layout.itemSize = CGSize(width: (self.VowelCollectionView.frame.size.width - 20)/3, height: 100)
+             // 20 is 2*5 for the 2 edges plus 2*5 for the spaces between the cells
         
     }
 
@@ -123,7 +127,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     internal func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellVowel", for: indexPath)
         
-//        cell.backgroundView?.backgroundColor = UIColor.black
+        //cell.backgroundView?.backgroundColor = UIColor.black
+        cell.contentView.backgroundColor = UIColor.blue
+//        cell.contentView.layer.cornerRadius = 5
+//        cell.contentView.layer.masksToBounds = true
+        cell.layer.cornerRadius = 10
+        
         return cell
     }
     

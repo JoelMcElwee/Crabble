@@ -236,7 +236,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BQg-qI-Ja6">
-                                <rect key="frame" x="0.0" y="98" width="375" height="520"/>
+                                <rect key="frame" x="0.0" y="98" width="375" height="569"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SKC-7r-MiY">
                                     <size key="itemSize" width="50" height="50"/>
@@ -267,12 +267,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="BQg-qI-Ja6" firstAttribute="top" secondItem="H2X-uA-b6m" secondAttribute="bottom" constant="8" symbolic="YES" id="LSp-tI-B8p"/>
+                            <constraint firstItem="BQg-qI-Ja6" firstAttribute="leading" secondItem="SYw-2p-yeD" secondAttribute="leading" id="2dI-aZ-sGx"/>
+                            <constraint firstItem="BQg-qI-Ja6" firstAttribute="top" secondItem="H2X-uA-b6m" secondAttribute="bottom" constant="8" symbolic="YES" id="KSG-Cl-gfY"/>
                             <constraint firstItem="H2X-uA-b6m" firstAttribute="top" secondItem="Lbu-Gb-Wpx" secondAttribute="bottom" constant="8" symbolic="YES" id="WX9-DV-xvj"/>
                             <constraint firstItem="H2X-uA-b6m" firstAttribute="trailing" secondItem="SYw-2p-yeD" secondAttribute="trailingMargin" id="Z88-p6-m7K"/>
-                            <constraint firstAttribute="trailing" secondItem="BQg-qI-Ja6" secondAttribute="trailing" id="qRU-jf-Udb"/>
-                            <constraint firstItem="BQg-qI-Ja6" firstAttribute="bottom" secondItem="IWv-O9-6T9" secondAttribute="top" id="qkX-hy-9fX"/>
-                            <constraint firstItem="BQg-qI-Ja6" firstAttribute="leading" secondItem="SYw-2p-yeD" secondAttribute="leading" id="uF7-m7-uD4"/>
+                            <constraint firstAttribute="trailing" secondItem="BQg-qI-Ja6" secondAttribute="trailing" id="fAN-l4-4Pe"/>
+                            <constraint firstAttribute="bottom" secondItem="BQg-qI-Ja6" secondAttribute="bottom" id="pQc-im-ynZ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Consonants" id="J9n-xR-bel"/>
@@ -294,14 +294,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W7u-up-dDf">
-                                <rect key="frame" x="0.0" y="98" width="375" height="520"/>
+                                <rect key="frame" x="0.0" y="98" width="375" height="569"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="egO-99-jDT">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="egO-99-jDT" id="LSg-3l-goT">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -319,12 +319,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="W7u-up-dDf" secondAttribute="trailing" id="0WX-z3-BOf"/>
-                            <constraint firstItem="W7u-up-dDf" firstAttribute="top" secondItem="1EE-TD-KkX" secondAttribute="bottom" constant="8" symbolic="YES" id="HJ7-Zb-qrJ"/>
+                            <constraint firstAttribute="bottom" secondItem="W7u-up-dDf" secondAttribute="bottom" id="Hsq-N0-ru2"/>
                             <constraint firstItem="1EE-TD-KkX" firstAttribute="top" secondItem="vgH-mQ-SFy" secondAttribute="bottom" constant="8" symbolic="YES" id="MFY-lu-ii7"/>
-                            <constraint firstItem="W7u-up-dDf" firstAttribute="bottom" secondItem="Qt5-XI-bMa" secondAttribute="top" id="SvX-1R-2X2"/>
+                            <constraint firstItem="W7u-up-dDf" firstAttribute="leading" secondItem="vFp-oh-jTU" secondAttribute="leading" id="Sr2-KI-kC1"/>
                             <constraint firstItem="1EE-TD-KkX" firstAttribute="trailing" secondItem="vFp-oh-jTU" secondAttribute="trailingMargin" id="Zql-eY-YvA"/>
-                            <constraint firstItem="W7u-up-dDf" firstAttribute="leading" secondItem="vFp-oh-jTU" secondAttribute="leading" id="w0J-wR-GcL"/>
+                            <constraint firstItem="W7u-up-dDf" firstAttribute="top" secondItem="1EE-TD-KkX" secondAttribute="bottom" constant="8" symbolic="YES" id="hex-tV-BMg"/>
+                            <constraint firstAttribute="trailing" secondItem="W7u-up-dDf" secondAttribute="trailing" id="l9c-rj-HpB"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dictionary" id="9by-jB-rjC"/>
@@ -346,7 +346,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mKD-FZ-yFE">
-                                <rect key="frame" x="0.0" y="98" width="375" height="520"/>
+                                <rect key="frame" x="0.0" y="98" width="375" height="569"/>
                                 <color key="backgroundColor" red="0.0" green="0.1843137255" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CFh-mk-cPR">
                                     <size key="itemSize" width="50" height="50"/>
@@ -374,13 +374,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="mKD-FZ-yFE" secondAttribute="trailing" id="2lv-MX-gdO"/>
+                            <constraint firstAttribute="bottom" secondItem="mKD-FZ-yFE" secondAttribute="bottom" id="8Rb-CZ-v2e"/>
                             <constraint firstItem="exw-2V-0tD" firstAttribute="top" secondItem="D3V-rj-dhs" secondAttribute="bottom" constant="528" id="Adb-pR-JqQ"/>
-                            <constraint firstItem="mKD-FZ-yFE" firstAttribute="bottom" secondItem="exw-2V-0tD" secondAttribute="top" id="GhT-jZ-AmT"/>
-                            <constraint firstItem="mKD-FZ-yFE" firstAttribute="top" secondItem="D3V-rj-dhs" secondAttribute="bottom" constant="8" symbolic="YES" id="Oc3-bg-ok5"/>
+                            <constraint firstAttribute="trailing" secondItem="mKD-FZ-yFE" secondAttribute="trailing" id="Asq-Hd-McM"/>
+                            <constraint firstItem="mKD-FZ-yFE" firstAttribute="top" secondItem="D3V-rj-dhs" secondAttribute="bottom" constant="8" symbolic="YES" id="F2c-GW-q0P"/>
                             <constraint firstItem="D3V-rj-dhs" firstAttribute="top" secondItem="wry-MZ-4PX" secondAttribute="bottom" constant="8" symbolic="YES" id="fBW-rO-JQ7"/>
+                            <constraint firstItem="mKD-FZ-yFE" firstAttribute="leading" secondItem="mbc-b8-ddo" secondAttribute="leading" id="kIc-fF-Uu2"/>
                             <constraint firstItem="D3V-rj-dhs" firstAttribute="centerX" secondItem="mbc-b8-ddo" secondAttribute="centerX" constant="89.5" id="pXm-KP-QKt"/>
-                            <constraint firstItem="mKD-FZ-yFE" firstAttribute="leading" secondItem="mbc-b8-ddo" secondAttribute="leading" id="xb6-jY-Bdd"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Symbols" id="q59-HN-3hv"/>
