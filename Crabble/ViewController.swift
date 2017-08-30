@@ -101,17 +101,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let layout = self.VowelCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.sectionInset = UIEdgeInsetsMake(0, 5, 0, 5);
-        layout.minimumInteritemSpacing = 5; // this number could be anything <=5. Need it here because the default is 10.
-        layout.itemSize = CGSize(width: (self.VowelCollectionView.frame.size.width - 20)/3, height: 100)
-             // 20 is 2*5 for the 2 edges plus 2*5 for the spaces between the cells
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize
+    {
+        return CGSize(width: 50, height: 50)
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -128,10 +127,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellVowel", for: indexPath)
         
         //cell.backgroundView?.backgroundColor = UIColor.black
-        cell.contentView.backgroundColor = UIColor.blue
-//        cell.contentView.layer.cornerRadius = 5
-//        cell.contentView.layer.masksToBounds = true
+        cell.contentView.backgroundColor = UIColor.lightGray
         cell.layer.cornerRadius = 10
+//        let rect : CGRect = CGRect(x: 50, y: 50, width: 50, height: 50)
+        //cell.resizableSnapshotView(from: rect, afterScreenUpdates: true, withCapInsets: .init(top: 40, left: 40, bottom: 40, right: 40))
+        
         
         return cell
     }
