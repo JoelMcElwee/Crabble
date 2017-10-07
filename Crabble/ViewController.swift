@@ -9,13 +9,10 @@
 import UIKit
 import Foundation
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class ViewController: UIViewController{
     
     var randomVowel : Int = 0
-    var randomVowel2 : Int = 0
-    var randomConsonants : Int = 0
-    var randomConsonants2 : Int = 0
-    var newWord : String = ""
+    var randomConsonant : Int = 0
     
     @IBOutlet var VowelCollectionView: UICollectionView!
     @IBOutlet weak var wordLable: UILabel!
@@ -26,72 +23,74 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var CVLabel: UILabel!
     @IBOutlet weak var CVC: UIButton!
     
+    func random(type : String) -> String {
+        
+        if type.lowercased() == "vow" {
+            randomVowel = Int(arc4random_uniform(UInt32(vowels.count)))
+            return vowels[randomVowel]
+        }
+        else if type.lowercased() == "con" {
+            randomConsonant = Int(arc4random_uniform(UInt32(consonants.count)))
+            return consonants[randomConsonant]
+        }
+        else{
+            print("Oh no! Invalid type!")
+            return "ERROR"
+        }
+        
+    }
+    
+    func makeWords(pattern : String) -> String{
+        var newWord : String = ""
+        
+        for ch in pattern.lowercased().characters {
+            if (ch == "v"){
+                newWord += random(type: "vow")
+            }
+            else if (ch == "c"){
+                newWord += random(type: "con")
+            }
+            else{
+                print("Oh no! Invalid pattern!")
+                return "ERROR"
+            }
+        }
+        
+        return newWord;
+        
+        
+    }
+    
     @IBAction func cvcAction(_ sender: Any) {
-        randomVowel = Int(arc4random_uniform(UInt32(vowels.count)))
-        randomConsonants = Int(arc4random_uniform(UInt32(consonants.count)))
-        randomConsonants2 = Int(arc4random_uniform(UInt32(consonants.count)))
         
-        newWord = consonants[randomConsonants] + "-" + vowels[randomVowel] + "-" + consonants[randomConsonants2]
-        
-        wordLable.text = newWord
+        wordLable.text = makeWords(pattern: "cvc");
         
     }
     
     @IBOutlet weak var VCV: UIButton!
     @IBAction func vcvAction(_ sender: Any) {
-        randomVowel = Int(arc4random_uniform(UInt32(vowels.count)))
-        randomVowel2 = Int(arc4random_uniform(UInt32(vowels.count)))
-        randomConsonants = Int(arc4random_uniform(UInt32(consonants.count)))
-        
-        newWord = vowels[randomVowel] + "-" + consonants[randomConsonants] + "-" + vowels[randomVowel2]
-        
-        VCVLabel.text = newWord
-
-        
+        VCVLabel.text = makeWords(pattern: "vcv")
     }
     
     @IBOutlet weak var CV: UIButton!
     @IBAction func cvAction(_ sender: Any) {
-        randomVowel = Int(arc4random_uniform(UInt32(vowels.count)))
-        randomConsonants = Int(arc4random_uniform(UInt32(consonants.count)))
-        
-        newWord = consonants[randomConsonants] + "-" + vowels[randomVowel]
-        
-        CVLabel.text = newWord
+        CVLabel.text = makeWords(pattern: "cv")
     }
     
     @IBOutlet weak var VC: UIButton!
     @IBAction func vcAction(_ sender: Any) {
-        randomVowel = Int(arc4random_uniform(UInt32(vowels.count)))
-        randomConsonants = Int(arc4random_uniform(UInt32(consonants.count)))
-        
-        newWord = vowels[randomVowel] + "-" + consonants[randomConsonants]
-        
-        VCLabel.text = newWord
+        VCLabel.text = makeWords(pattern: "vc")
     }
     
     
     @IBOutlet weak var CCV: UIButton!
     @IBAction func ccvAction(_ sender: Any) {
-        randomVowel = Int(arc4random_uniform(UInt32(vowels.count)))
-        randomConsonants = Int(arc4random_uniform(UInt32(consonants.count)))
-        randomConsonants2 = Int(arc4random_uniform(UInt32(consonants.count)))
-        
-        newWord = consonants[randomConsonants] + "-" + consonants[randomConsonants2] + "-" + vowels[randomVowel]
-        
-        CCVLabel.text = newWord
+        CCVLabel.text = makeWords(pattern: "ccv")
     }
     
     @IBOutlet weak var VVC: UIButton!
     @IBAction func vvcAction(_ sender: Any) {
-        randomVowel = Int(arc4random_uniform(UInt32(vowels.count)))
-        randomVowel2 = Int(arc4random_uniform(UInt32(vowels.count)))
-        
-        randomConsonants = Int(arc4random_uniform(UInt32(consonants.count)))
-        
-        newWord = vowels[randomVowel] + "-" + vowels[randomVowel2] + "-" + consonants[randomConsonants]
-        
-        VVCLabel.text = newWord
+        VVCLabel.text = makeWords(pattern: "vvc")
     }
     
     let vowels = ["ah","aye", "ee","eh","ih","eye","oh","oo","uh","euh"]
@@ -108,34 +107,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Dispose of any resources that can be recreated.
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize
-    {
-        return CGSize(width: 50, height: 50)
-    }
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
         
-        return 4
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 60
-    }
-    
-    internal func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellVowel", for: indexPath)
-        
-        //cell.backgroundView?.backgroundColor = UIColor.black
-        cell.contentView.backgroundColor = UIColor.lightGray
-        cell.layer.cornerRadius = 10
-//        let rect : CGRect = CGRect(x: 50, y: 50, width: 50, height: 50)
-        //cell.resizableSnapshotView(from: rect, afterScreenUpdates: true, withCapInsets: .init(top: 40, left: 40, bottom: 40, right: 40))
-        
-        
-        return cell
-    }
-    
     
 
 
