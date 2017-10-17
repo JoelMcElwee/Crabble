@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4617500D1F96729500651806 /* VowelCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4617500C1F96729500651806 /* VowelCollectionViewController.swift */; };
+		4617500F1F9672EC00651806 /* ConsonantCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4617500E1F9672EC00651806 /* ConsonantCollectionViewController.swift */; };
+		461750111F96730E00651806 /* SymbolCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461750101F96730E00651806 /* SymbolCollectionViewController.swift */; };
 		462E808D1F2268400027C9A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462E808C1F2268400027C9A0 /* AppDelegate.swift */; };
 		462E808F1F2268400027C9A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462E808E1F2268400027C9A0 /* ViewController.swift */; };
 		462E80921F2268400027C9A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 462E80901F2268400027C9A0 /* Main.storyboard */; };
@@ -16,6 +19,7 @@
 		462E80AD1F2268400027C9A0 /* CrabbleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462E80AC1F2268400027C9A0 /* CrabbleUITests.swift */; };
 		468C89011F32A5DB00537BD9 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468C89001F32A5DB00537BD9 /* TabBarViewController.swift */; };
 		468C89031F32A67600537BD9 /* FrostyTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468C89021F32A67600537BD9 /* FrostyTabBar.swift */; };
+		46A7F4D71F8BFDBE0061B695 /* TextEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A7F4D61F8BFDBE0061B695 /* TextEditViewController.swift */; };
 		46DA815C1F297C6C002F43F8 /* VowelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DA815B1F297C6C002F43F8 /* VowelCollectionViewCell.swift */; };
 		46DA815E1F297C93002F43F8 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DA815D1F297C93002F43F8 /* CollectionViewController.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4617500C1F96729500651806 /* VowelCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VowelCollectionViewController.swift; sourceTree = "<group>"; };
+		4617500E1F9672EC00651806 /* ConsonantCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsonantCollectionViewController.swift; sourceTree = "<group>"; };
+		461750101F96730E00651806 /* SymbolCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolCollectionViewController.swift; sourceTree = "<group>"; };
 		462E80891F2268400027C9A0 /* Crabble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crabble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		462E808C1F2268400027C9A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		462E808E1F2268400027C9A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +60,7 @@
 		462E80AE1F2268400027C9A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		468C89001F32A5DB00537BD9 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		468C89021F32A67600537BD9 /* FrostyTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrostyTabBar.swift; sourceTree = "<group>"; };
+		46A7F4D61F8BFDBE0061B695 /* TextEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditViewController.swift; sourceTree = "<group>"; };
 		46DA815B1F297C6C002F43F8 /* VowelCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VowelCollectionViewCell.swift; sourceTree = "<group>"; };
 		46DA815D1F297C93002F43F8 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,8 +118,12 @@
 				468C89001F32A5DB00537BD9 /* TabBarViewController.swift */,
 				468C89021F32A67600537BD9 /* FrostyTabBar.swift */,
 				462E80901F2268400027C9A0 /* Main.storyboard */,
+				46A7F4D61F8BFDBE0061B695 /* TextEditViewController.swift */,
 				46DA815B1F297C6C002F43F8 /* VowelCollectionViewCell.swift */,
 				46DA815D1F297C93002F43F8 /* CollectionViewController.swift */,
+				4617500C1F96729500651806 /* VowelCollectionViewController.swift */,
+				4617500E1F9672EC00651806 /* ConsonantCollectionViewController.swift */,
+				461750101F96730E00651806 /* SymbolCollectionViewController.swift */,
 				462E80931F2268400027C9A0 /* Assets.xcassets */,
 				462E80951F2268400027C9A0 /* LaunchScreen.storyboard */,
 				462E80981F2268400027C9A0 /* Info.plist */,
@@ -278,8 +290,12 @@
 				46DA815E1F297C93002F43F8 /* CollectionViewController.swift in Sources */,
 				462E808F1F2268400027C9A0 /* ViewController.swift in Sources */,
 				46DA815C1F297C6C002F43F8 /* VowelCollectionViewCell.swift in Sources */,
+				4617500F1F9672EC00651806 /* ConsonantCollectionViewController.swift in Sources */,
 				468C89011F32A5DB00537BD9 /* TabBarViewController.swift in Sources */,
+				461750111F96730E00651806 /* SymbolCollectionViewController.swift in Sources */,
 				462E808D1F2268400027C9A0 /* AppDelegate.swift in Sources */,
+				4617500D1F96729500651806 /* VowelCollectionViewController.swift in Sources */,
+				46A7F4D71F8BFDBE0061B695 /* TextEditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,14 @@
 import UIKit
 import Foundation
 
-class ViewController: UIViewController{
+protocol ListDelegate{
+    var vowels : [String] {get set}
+    var consonants : [String] {get set}
+}
+
+
+class ViewController: UIViewController, ListDelegate{
+    var delegate : ListDelegate?
     
     var randomVowel : Int = 0
     var randomConsonant : Int = 0
@@ -93,9 +100,9 @@ class ViewController: UIViewController{
         VVCLabel.text = makeWords(pattern: "vvc")
     }
     
-    let vowels = ["ah","aye", "ee","eh","ih","eye","oh","oo","uh","euh"]
+    var vowels: [String] = ["ah","aye", "ee","eh","ih","eye","oh","oo","uh","euh"]
     
-    let consonants = ["b","k", "d","f","g","h","H","ich","j","l","m","n","p","pweh","q","r","rr","s","t","sh","th","v","w","x","y","z","zshe"]
+    var consonants: [String] = ["b","k", "d","f","g","h","H","ich","j","l","m","n","p","pweh","q","r","rr","s","t","sh","th","v","w","x","y","z","zshe"]
 
 
     override func viewDidLoad() {

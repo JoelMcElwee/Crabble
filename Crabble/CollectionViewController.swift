@@ -8,9 +8,7 @@
 
 import UIKit
 
-//private let reuseIdentifier = "Cell"
-
-class CollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
+class CollectionViewController: ViewController, UICollectionViewDataSource, UICollectionViewDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,11 +18,6 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-//    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize
-//    {
-//        return CGSize(width: 0, height: 0)
-//    }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         
@@ -32,38 +25,29 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 20
+
+        return 1
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let width = collectionView.bounds.width/3.0
-//        let height = width
-//
-//        return CGSize(width: width, height: height)
-//    }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        return UIEdgeInsetsMake(1,1,1,1)
-//    }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//        return 4
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return 5
-//    }
-    
     internal func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellVowel", for: indexPath)
         
-        //cell.backgroundView?.backgroundColor = UIColor.black
-        cell.contentView.backgroundColor = UIColor.yellow
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
         cell.layer.cornerRadius = 10
-        //        let rect : CGRect = CGRect(x: 50, y: 50, width: 50, height: 50)
-        //cell.resizableSnapshotView(from: rect, afterScreenUpdates: true, withCapInsets: .init(top: 40, left: 40, bottom: 40, right: 40))
+        cell.bounds = CGRect(x: 0, y: 0, width: 125, height: 130)
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: cell.bounds.width, height: cell.bounds.height))
+        label.textAlignment = .center
+        label.font = UIFont(name: "Avenir", size: 30.0)
         
+        
+        if (cell.tag == 1){
+            label.text = "\(vowels[indexPath.row])"
+            cell.addSubview(label)
+            
+            }
+        else if (cell.tag == 2){
+            label.text = consonants[indexPath.row]
+            cell.addSubview(label)
+        }
         
         return cell
     }

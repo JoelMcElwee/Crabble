@@ -296,9 +296,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BQg-qI-Ja6">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BQg-qI-Ja6">
                                 <rect key="frame" x="0.0" y="85.5" width="375" height="581.5"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SKC-7r-MiY">
                                     <size key="itemSize" width="120" height="125"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -306,7 +306,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellConsonant" id="zIj-9Y-EPw">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="center" reuseIdentifier="Cell" id="zIj-9Y-EPw">
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="125"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -316,6 +316,10 @@
                                         <color key="backgroundColor" red="1" green="0.029547991071428571" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="U70-hf-iqR" id="q17-F3-hwf"/>
+                                    <outlet property="delegate" destination="U70-hf-iqR" id="adK-uA-5HB"/>
+                                </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONSONANTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2X-uA-b6m">
                                 <rect key="frame" x="16" y="28" width="255" height="49.5"/>
@@ -406,25 +410,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mKD-FZ-yFE">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mKD-FZ-yFE">
                                 <rect key="frame" x="0.0" y="85.5" width="375" height="581.5"/>
-                                <color key="backgroundColor" red="0.0" green="0.1843137255" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CFh-mk-cPR">
-                                    <size key="itemSize" width="150" height="147"/>
+                                    <size key="itemSize" width="120" height="123"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellSymbols" id="Umb-5P-Snu">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="147"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="center" reuseIdentifier="Cell" id="Umb-5P-Snu">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="123"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="150" height="147"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="123"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="sm4-rN-Wmb" id="XD3-ul-mMn"/>
+                                    <outlet property="delegate" destination="sm4-rN-Wmb" id="JU3-8d-3DX"/>
+                                </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SYMBOLS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3V-rj-dhs">
                                 <rect key="frame" x="16" y="28" width="164" height="49.5"/>
@@ -450,6 +459,80 @@
             </objects>
             <point key="canvasLocation" x="2240.8000000000002" y="169.56521739130437"/>
         </scene>
+        <!--Text Entry-->
+        <scene sceneID="Wcn-D3-veX">
+            <objects>
+                <viewController title="Text Entry" id="SPB-9x-pME" customClass="TextEditViewController" customModule="Crabble" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eHq-ly-WLH"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dav-aV-tGC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BU7-ZM-FXT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVw-rA-v2L">
+                                <rect key="frame" x="47" y="84" width="281" height="89"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="65"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hef-wM-3tq">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="og2-kd-Zq4"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="done" id="abM-RO-2td">
+                                        <connections>
+                                            <action selector="doneButton:" destination="SPB-9x-pME" id="O6b-iY-xUQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQe-bZ-XbR">
+                                <rect key="frame" x="216" y="370" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Choose Pro"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCs-Lz-oIH">
+                                <rect key="frame" x="216" y="196" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Choose Symbol"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVs-0K-EqL">
+                                <rect key="frame" x="39" y="370" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Pronounce"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJG-GE-Egl">
+                                <rect key="frame" x="39" y="196" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Make Symbol"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pVw-rA-v2L" firstAttribute="top" secondItem="hef-wM-3tq" secondAttribute="bottom" constant="11" id="0yA-te-vIK"/>
+                            <constraint firstItem="hef-wM-3tq" firstAttribute="top" secondItem="eHq-ly-WLH" secondAttribute="bottom" constant="8" id="L0I-Fh-8Wv"/>
+                            <constraint firstItem="hef-wM-3tq" firstAttribute="leading" secondItem="BU7-ZM-FXT" secondAttribute="leading" id="hSp-Su-X53"/>
+                            <constraint firstItem="pVw-rA-v2L" firstAttribute="leading" secondItem="BU7-ZM-FXT" secondAttribute="leadingMargin" constant="31" id="lBx-JV-42l"/>
+                            <constraint firstItem="hef-wM-3tq" firstAttribute="centerX" secondItem="pVw-rA-v2L" secondAttribute="centerX" id="q6g-Lt-jD1"/>
+                            <constraint firstAttribute="trailing" secondItem="hef-wM-3tq" secondAttribute="trailing" id="sUA-Cd-072"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="controllerLabel" destination="pVw-rA-v2L" id="h7q-DM-NB9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nCq-no-Kgh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2240.8000000000002" y="939.58020989505258"/>
+        </scene>
         <!--Vowels-->
         <scene sceneID="VxF-aG-nxi">
             <objects>
@@ -462,9 +545,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5QC-CV-8AN">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5QC-CV-8AN">
                                 <rect key="frame" x="0.0" y="85.5" width="375" height="581.5"/>
-                                <color key="backgroundColor" red="0.59449638719999998" green="0.15435267857142856" blue="0.450523173" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="d8V-D1-5N8">
                                     <size key="itemSize" width="120" height="125"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -472,21 +555,12 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellVowel" id="sab-5n-LjO" customClass="VowelCollectionViewCell" customModule="Crabble" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" reuseIdentifier="Cell" id="sab-5n-LjO" customClass="VowelCollectionViewCell" customModule="Crabble" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="125"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="120" height="125"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85e-bK-yhn">
-                                                    <rect key="frame" x="12" y="39" width="96" height="47"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
                                         </view>
                                         <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </collectionViewCell>
@@ -502,6 +576,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNa-Rz-v0M">
+                                <rect key="frame" x="337" y="42" width="22" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Add a word copy1x"/>
+                                <connections>
+                                    <segue destination="SPB-9x-pME" kind="popoverPresentation" popoverAnchorView="wNa-Rz-v0M" id="SKs-kK-wmw">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -543,6 +627,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Add a word copy1x" width="100" height="100"/>
         <image name="ClearImage" width="350" height="350"/>
         <image name="Consonant Icon" width="15" height="15"/>
         <image name="Dictionary Icon" width="15" height="15"/>
